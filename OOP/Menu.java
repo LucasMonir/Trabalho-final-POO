@@ -3,7 +3,7 @@ import javax.swing.border.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class Menu extends JFrame{
+public class Menu extends JFrame {
     private static final long serialVersionUID = 1L;
     private JButton cadastroDeTitulos = new JButton("Cadastro de títulos");
     private JButton baixaDeTitulos = new JButton("Baixa de títulos");
@@ -11,19 +11,18 @@ public class Menu extends JFrame{
     private JButton salvar = new JButton("Salvar");
     private JButton sair = new JButton("Sair");
 
-    public Menu(){
+    public Menu() {
         super("XYZ COMERCIO DE PRODUTOS LTDA: SISTEMA DE COBRANÇA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 300));
-        
+
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
+        p1.add(new JLabel("Menu principal"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new GridBagLayout());
-        p2.setBorder(new EmptyBorder( 10, 10, 10 ,10));
-
-        p1.add(new JLabel("Menu principal"));
+        p2.setBorder(new EmptyBorder(10, 10, 10, 10));
         p2.add(cadastroDeTitulos, setSpacing());
         p2.add(baixaDeTitulos, setSpacing());
         p2.add(relatorios, setSpacing());
@@ -36,33 +35,34 @@ public class Menu extends JFrame{
         setVisible(true);
     }
 
-    public GridBagConstraints setSpacing(){
+    public GridBagConstraints setSpacing() {
         GridBagConstraints spacingBetweenButtons = new GridBagConstraints();
         spacingBetweenButtons.weightx = 1;
         spacingBetweenButtons.weighty = .10;
         spacingBetweenButtons.insets = new Insets(2, 0, 2, 0);
         spacingBetweenButtons.gridwidth = GridBagConstraints.REMAINDER;
         spacingBetweenButtons.fill = GridBagConstraints.BOTH;
+
         return spacingBetweenButtons;
     }
 
-    public void setAcaoCadastroDeTitulos(ActionListener action){
+    public void setAcaoCadastroDeTitulos(ActionListener action) {
         cadastroDeTitulos.addActionListener(action);
     }
 
-    public void setAcaoBaixaDeTitulos(ActionListener action){
+    public void setAcaoBaixaDeTitulos(ActionListener action) {
         baixaDeTitulos.addActionListener(action);
     }
 
-    public void setAcaoRelatorios(ActionListener action){
+    public void setAcaoRelatorios(ActionListener action) {
         relatorios.addActionListener(action);
     }
 
-    public void setAcaoSalvar(ActionListener action){
+    public void setAcaoSalvar(ActionListener action) {
         salvar.addActionListener(action);
     }
 
-    public void setAcaoSair(ActionListener action){
+    public void setAcaoSair(ActionListener action) {
         sair.addActionListener(action);
     }
 
