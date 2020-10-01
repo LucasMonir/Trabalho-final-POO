@@ -17,7 +17,9 @@ public class Menu extends JFrame {
         super("XYZ COMERCIO DE PRODUTOS LTDA: SISTEMA DE COBRANÇA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 300));
-
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
         p1.add(new JLabel("Menu principal"));
