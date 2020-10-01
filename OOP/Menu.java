@@ -1,21 +1,21 @@
 import javax.swing.*;
 import javax.swing.border.*;
-
+import java.awt.event.*;
 import java.awt.*;
 
 public class Menu extends JFrame{
     private static final long serialVersionUID = 1L;
+    private JButton cadastroDeTitulos = new JButton("Cadastro de títulos");
+    private JButton baixaDeTitulos = new JButton("Baixa de títulos");
+    private JButton relatorios = new JButton("Relatórios");
+    private JButton salvar = new JButton("Salvar");
+    private JButton sair = new JButton("Sair");
 
     public Menu(){
         super("XYZ COMERCIO DE PRODUTOS LTDA: SISTEMA DE COBRANÇA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 300));
-        JButton cadastroDeTitulos = new JButton("Cadastro de títulos");
-        JButton baixaDeTitulos = new JButton("Baixa de títulos");
-        JButton relatorios = new JButton("Relatórios");
-        JButton salvar = new JButton("Salvar");
-        JButton sair = new JButton("Sair");
-
+        
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
 
@@ -44,6 +44,26 @@ public class Menu extends JFrame{
         spacingBetweenButtons.gridwidth = GridBagConstraints.REMAINDER;
         spacingBetweenButtons.fill = GridBagConstraints.BOTH;
         return spacingBetweenButtons;
+    }
+
+    public void setAcaoCadastroDeTitulos(ActionListener action){
+        cadastroDeTitulos.addActionListener(action);
+    }
+
+    public void setAcaoBaixaDeTitulos(ActionListener action){
+        baixaDeTitulos.addActionListener(action);
+    }
+
+    public void setAcaoRelatorios(ActionListener action){
+        relatorios.addActionListener(action);
+    }
+
+    public void setAcaoSalvar(ActionListener action){
+        salvar.addActionListener(action);
+    }
+
+    public void setAcaoSair(ActionListener action){
+        sair.addActionListener(action);
     }
 
     public static void main(String[] args) {
