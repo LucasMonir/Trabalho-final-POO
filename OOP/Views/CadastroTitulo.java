@@ -5,15 +5,15 @@ import javax.swing.border.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class Menu extends JFrame {
+public class CadastroTitulo extends JFrame {
     private static final long serialVersionUID = 1L;
-    private JButton cadastroDeTitulos = new JButton("Cadastro de títulos");
-    private JButton baixaDeTitulos = new JButton("Baixa de títulos");
-    private JButton relatorios = new JButton("Relatórios");
-    private JButton salvar = new JButton("Salvar");
+    private JButton inclusao = new JButton("Inclusão");
+    private JButton alteracao = new JButton("Alteração");
+    private JButton consulta = new JButton("Consulta");
+    private JButton exclusao = new JButton("Exlusão");
     private JButton sair = new JButton("Sair");
 
-    public Menu() {
+    public CadastroTitulo() {
         super("XYZ COMERCIO DE PRODUTOS LTDA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 300));
@@ -22,15 +22,15 @@ public class Menu extends JFrame {
         
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
-        p1.add(new JLabel("Menu principal: Sistema de cobrança"));
+        p1.add(new JLabel("Menu de cadastro"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new GridBagLayout());
         p2.setBorder(new EmptyBorder(10, 10, 10, 10));
-        p2.add(cadastroDeTitulos, setSpacing());
-        p2.add(baixaDeTitulos, setSpacing());
-        p2.add(relatorios, setSpacing());
-        p2.add(salvar, setSpacing());
+        p2.add(inclusao, setSpacing());
+        p2.add(alteracao, setSpacing());
+        p2.add(consulta, setSpacing());
+        p2.add(exclusao, setSpacing());
         p2.add(sair, setSpacing());
 
         getContentPane().add(p1, BorderLayout.NORTH);
@@ -49,20 +49,20 @@ public class Menu extends JFrame {
         return spacingBetweenButtons;
     }
 
-    public void setAcaoCadastroDeTitulos(ActionListener action) {
-        cadastroDeTitulos.addActionListener(action);
+    public void setAcaoInclusao(ActionListener action) {
+        inclusao.addActionListener(action);
     }
 
-    public void setAcaoBaixaDeTitulos(ActionListener action) {
-        baixaDeTitulos.addActionListener(action);
+    public void setAcaoAlteracao(ActionListener action) {
+        alteracao.addActionListener(action);
     }
 
-    public void setAcaoRelatorios(ActionListener action) {
-        relatorios.addActionListener(action);
+    public void setAcaoConsulta(ActionListener action) {
+        consulta.addActionListener(action);
     }
 
-    public void setAcaoSalvar(ActionListener action) {
-        salvar.addActionListener(action);
+    public void setAcaoExclusao(ActionListener action) {
+        exclusao.addActionListener(action);
     }
 
     public void setAcaoSair(ActionListener action) {
@@ -70,6 +70,6 @@ public class Menu extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Menu();
+        new CadastroTitulo();
     }
 }

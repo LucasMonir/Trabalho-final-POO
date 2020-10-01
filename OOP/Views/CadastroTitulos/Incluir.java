@@ -45,8 +45,8 @@ public class Incluir extends JFrame {
         JPanel p3 = new JPanel();
         p3.setLayout(new FlowLayout());
         
-        p3.add(sair);
         p3.add(salvar);
+        p3.add(sair);
 
         getContentPane().add(p1, BorderLayout.NORTH);
         getContentPane().add(p2);
@@ -93,5 +93,8 @@ public class Incluir extends JFrame {
 
     public void setAcaoSair(ActionListener action) {
         sair.addActionListener(action);
+    }
+    public static void main(String[] args) {
+        new Incluir();
     }
 }
