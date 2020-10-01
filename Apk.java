@@ -33,7 +33,7 @@ public class Apk {
                                         + "SISTEMA DE COBRANÇA \n \n" + "CADASTRO DE TÍTULOS \n"
                                         + "1 - INCLUSÃO \n" + "2 - ALTERAÇÃO \n" + "3 - CONSULTA \n"
                                         + "4 - EXCLUSÃO \n" + "0 - RETORNAR \n" + "Opção:"));
-                                    break;
+                                    break;  
 
                                 case 1:
                                     incluir();

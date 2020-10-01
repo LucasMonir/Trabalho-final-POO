@@ -1,11 +1,11 @@
-package Views;
+package Views.CadastroTitulos;
 
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class CadastroTitulos extends JFrame {
+public class Incluir extends JFrame {
     private static final long serialVersionUID = 1L;
     private JTextField nome = new JTextField();
     private JTextField cpf = new JTextField();
@@ -14,7 +14,7 @@ public class CadastroTitulos extends JFrame {
     private JButton salvar = new JButton("Salvar");
     private JButton sair = new JButton("Sair");
 
-    public CadastroTitulos() {
+    public Incluir() {
         super("XYZ COMERCIO DE PRODUTOS LTDA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 300));
@@ -24,7 +24,7 @@ public class CadastroTitulos extends JFrame {
 
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
-        p1.add(new JLabel("Cadastro de título de cobrança"));
+        p1.add(new JLabel("Incluir título de cobrança"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new GridLayout(0, 1));
