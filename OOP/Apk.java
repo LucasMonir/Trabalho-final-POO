@@ -77,7 +77,7 @@ public class Apk {
                         do {
                             switch (subOp) {
                                 case 5:
-                                    if (listaClientes.size() != 0) {
+                                    if (!listaClientes.isEmpty()) {
                                         subOp = Integer.parseInt(JOptionPane.showInputDialog("XYZ COMERCIO DE PRODUTOS LTDA. \n" + "SISTEMA DE COBRANÇA \n \n"
                                             + "RELATÓRIOS \n" + "1 - CLIENTES EM DÉBITO \n"
                                             + "2 - BALANÇO DE INADIMPLÊNCIA \n" + "3 - AVISOS AO CLIENTE \n"
@@ -299,7 +299,7 @@ public class Apk {
     // 1.1.3 consulta titulo
     private static void consulta() throws ListaException {
         boolean flag = false;
-        if (listaClientes.size() != 0) {
+        if (!listaClientes.isEmpty()) {
             int cpf = Integer.parseInt(JOptionPane.showInputDialog("Informe CPF do cliente:"));
             for (Cliente cliente : listaClientes) {
                 if (cliente.getCpf() == cpf) {
@@ -327,7 +327,7 @@ public class Apk {
         boolean flag = false;
         String[] options = { "Sim", "Não" };
         int x;
-        if (listaClientes.size() != 0) {
+        if (!listaClientes.isEmpty()) {
             int cpf = Integer.parseInt(JOptionPane.showInputDialog("Informe CPF do cliente:"));
             Iterator<Cliente> iter = listaClientes.iterator();
             while (iter.hasNext()) {
@@ -361,7 +361,7 @@ public class Apk {
         String[] options = { "Sim", "Não" };
         int x;
         boolean flag = false;
-        if (listaClientes.size() != 0) {
+        if (!listaClientes.isEmpty()) {
             int cpf = Integer.parseInt(JOptionPane.showInputDialog("Informe CPF do cliente:"));
             for (Cliente cliente : listaClientes) {
                 if (cliente.getCpf() == cpf) {
@@ -425,14 +425,14 @@ public class Apk {
     // metodo de Finalizar programa (salva os dados por garantia)
     private static void sair() {
         JOptionPane.showMessageDialog(null, "Saindo do programa!");
-        if (listaClientes.size() != 0) {
+        if (!listaClientes.isEmpty()) {
             Relatorios.salvar(listaClientes);
         }
     }
 
     // metodo de salvamento
     private static void salvar() throws ListaException {
-        if (listaClientes.size() != 0) {
+        if (!listaClientes.isEmpty()) {
             Relatorios.salvar(listaClientes);
             JOptionPane.showMessageDialog(null, "Dados dalvos com sucesso!");
         } else {
