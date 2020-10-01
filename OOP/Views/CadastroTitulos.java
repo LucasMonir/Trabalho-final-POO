@@ -87,7 +87,11 @@ public class CadastroTitulos extends JFrame {
         this.nome = nome;
     }
 
-    public static void main(String[] args) {
-        new CadastroTitulos();
+    public void setAcaoSalvar(ActionListener action) {
+        salvar.addActionListener(action);
+    }
+
+    public void setAcaoSair(ActionListener action) {
+        sair.addActionListener(action);
     }
 }
