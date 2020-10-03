@@ -1,17 +1,18 @@
-package Views.CadastroTitulos;
+package Views.Relatorios;
 
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class Excluir extends JFrame {
+
+public class AvisosAoCLiente extends JFrame {
     private static final long serialVersionUID = 1L;
     private JTextField cpf = new JTextField();
-    private JButton excluir = new JButton("Excluir");
+    private JButton gerarAviso = new JButton("Gerar Aviso");
     private JButton sair = new JButton("Sair");
 
-    public Excluir() {
+    public AvisosAoCLiente(){
         super("XYZ COMERCIO DE PRODUTOS LTDA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 200));
@@ -20,19 +21,19 @@ public class Excluir extends JFrame {
 
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
-        p1.add(new JLabel("Excluir título de cobrança"));
+        p1.add(new JLabel("Avisos ao cliente"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new GridLayout(0, 1));
         p2.setBorder(new EmptyBorder(10, 10, 10, 10));
-        
+
         p2.add(new JLabel("CPF:"));
         p2.add(cpf);
 
         JPanel p3 = new JPanel(); 
         p3.setLayout(new FlowLayout());
         
-        p3.add(excluir);
+        p3.add(gerarAviso);
         p3.add(sair);
 
         getContentPane().add(p1, BorderLayout.NORTH);
@@ -43,19 +44,11 @@ public class Excluir extends JFrame {
         setVisible(true);
     }
 
-    public JTextField getCpf() {
-        return cpf;
+    public void setAcaoGerarAviso(ActionListener action){
+        gerarAviso.addActionListener(action);
     }
 
-    public void setCpf(JTextField cpf) {
-        this.cpf = cpf;
-    }
-
-    public void setAcaoExcluir(ActionListener action) {
-        excluir.addActionListener(action);
-    }
-
-    public void setAcaoSair(ActionListener action) {
+    public void setAcaoSair(ActionListener action){
         sair.addActionListener(action);
     }
 }

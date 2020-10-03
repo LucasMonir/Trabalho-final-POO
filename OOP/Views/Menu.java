@@ -68,8 +68,4 @@ public class Menu extends JFrame {
     public void setAcaoSair(ActionListener action) {
         sair.addActionListener(action);
     }
-
-    public static void main(String[] args) {
-        new Menu();
-    }
 }

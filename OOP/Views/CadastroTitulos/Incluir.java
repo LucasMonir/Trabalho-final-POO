@@ -94,7 +94,4 @@ public class Incluir extends JFrame {
     public void setAcaoSair(ActionListener action) {
         sair.addActionListener(action);
     }
-    public static void main(String[] args) {
-        new Incluir();
-    }
 }

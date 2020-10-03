@@ -1,17 +1,19 @@
-package Views.CadastroTitulos;
+package Views;
 
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class Excluir extends JFrame {
+public class BaixaTitulo extends JFrame{
     private static final long serialVersionUID = 1L;
     private JTextField cpf = new JTextField();
-    private JButton excluir = new JButton("Excluir");
+    private JTextField valor = new JTextField();
+    private JButton pesquisar = new JButton("Pesquisar");
+    private JButton darBaixa = new JButton("Dar baixa");
     private JButton sair = new JButton("Sair");
-
-    public Excluir() {
+    
+    public BaixaTitulo(){
         super("XYZ COMERCIO DE PRODUTOS LTDA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 200));
@@ -20,7 +22,7 @@ public class Excluir extends JFrame {
 
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
-        p1.add(new JLabel("Excluir título de cobrança"));
+        p1.add(new JLabel("Baixa de título de cobrança"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new GridLayout(0, 1));
@@ -29,10 +31,14 @@ public class Excluir extends JFrame {
         p2.add(new JLabel("CPF:"));
         p2.add(cpf);
 
+        p2.add(new JLabel("Valor pago:"));
+        p2.add(valor);
+
         JPanel p3 = new JPanel(); 
         p3.setLayout(new FlowLayout());
         
-        p3.add(excluir);
+        p3.add(pesquisar);
+        p3.add(darBaixa);
         p3.add(sair);
 
         getContentPane().add(p1, BorderLayout.NORTH);
@@ -42,7 +48,7 @@ public class Excluir extends JFrame {
         pack();
         setVisible(true);
     }
-
+    
     public JTextField getCpf() {
         return cpf;
     }
@@ -51,8 +57,12 @@ public class Excluir extends JFrame {
         this.cpf = cpf;
     }
 
-    public void setAcaoExcluir(ActionListener action) {
-        excluir.addActionListener(action);
+    public void setAcaoPesquisar(ActionListener action){
+        pesquisar.addActionListener(action);
+    }
+
+    public void setAcaoDarBaixa(ActionListener action) {
+        darBaixa.addActionListener(action);
     }
 
     public void setAcaoSair(ActionListener action) {

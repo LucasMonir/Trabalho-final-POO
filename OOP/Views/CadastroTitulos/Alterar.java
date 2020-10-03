@@ -6,8 +6,7 @@ import java.awt.event.*;
 import java.awt.*;
 
 public class Alterar extends JFrame{
-    private static final long serialVersionUID = 1L;
-    private JTextField nome = new JTextField();
+    private static final long serialVersionUID = 1L;        
     private JTextField cpf = new JTextField();
     private JButton alterar = new JButton("Alterar");
     private JButton sair = new JButton("Sair");
@@ -26,9 +25,6 @@ public class Alterar extends JFrame{
         JPanel p2 = new JPanel();
         p2.setLayout(new GridLayout(0, 1));
         p2.setBorder(new EmptyBorder(10, 10, 10, 10));
-        
-        p2.add(new JLabel("Nome do cliente:"));
-        p2.add(nome);
 
         p2.add(new JLabel("CPF:"));
         p2.add(cpf);
@@ -61,9 +57,5 @@ public class Alterar extends JFrame{
 
     public void setAcaoSair(ActionListener action) {
         sair.addActionListener(action);
-    }
-
-    public static void main(String args[]){
-        new Alterar();
     }
 }

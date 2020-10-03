@@ -59,8 +59,4 @@ public class Consulta extends JFrame{
     public void setAcaoSair(ActionListener action) {
         sair.addActionListener(action);
     }
-
-    public static void main(String[] args) {
-        new Consulta();    
-    }
 }

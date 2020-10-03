@@ -5,32 +5,31 @@ import javax.swing.border.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class CadastroTitulo extends JFrame {
+public class Relatorio extends JFrame{
+    
     private static final long serialVersionUID = 1L;
-    private JButton inclusao = new JButton("Inclusão");
-    private JButton alteracao = new JButton("Alteração");
-    private JButton consulta = new JButton("Consulta");
-    private JButton exclusao = new JButton("Exlusão");
+    private JButton clientesEmDebito = new JButton("Clientes em débito");
+    private JButton balancoDeInadimplencia = new JButton("Balanço de inadimplência");
+    private JButton avisosAoCliente = new JButton("Avisos ao cliente");
     private JButton sair = new JButton("Sair");
 
-    public CadastroTitulo() {
+    public Relatorio(){
         super("XYZ COMERCIO DE PRODUTOS LTDA");
         setLayout(new BorderLayout());
         setPreferredSize(new Dimension(400, 300));
         setResizable(false);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        
+
         JPanel p1 = new JPanel();
         p1.setLayout(new GridBagLayout());
-        p1.add(new JLabel("Menu de cadastro"));
+        p1.add(new JLabel("Relatórios"));
 
         JPanel p2 = new JPanel();
         p2.setLayout(new GridBagLayout());
         p2.setBorder(new EmptyBorder(10, 10, 10, 10));
-        p2.add(inclusao, setSpacing());
-        p2.add(alteracao, setSpacing());
-        p2.add(consulta, setSpacing());
-        p2.add(exclusao, setSpacing());
+        p2.add(clientesEmDebito, setSpacing());
+        p2.add(balancoDeInadimplencia, setSpacing());
+        p2.add(avisosAoCliente, setSpacing());
         p2.add(sair, setSpacing());
 
         getContentPane().add(p1, BorderLayout.NORTH);
@@ -49,20 +48,16 @@ public class CadastroTitulo extends JFrame {
         return spacingBetweenButtons;
     }
 
-    public void setAcaoInclusao(ActionListener action) {
-        inclusao.addActionListener(action);
+    public void setAcaoClientesEmDebito(ActionListener action) {
+        clientesEmDebito.addActionListener(action);
     }
 
-    public void setAcaoAlteracao(ActionListener action) {
-        alteracao.addActionListener(action);
+    public void setAcaoBalancoDeInadimplencia(ActionListener action) {
+        balancoDeInadimplencia.addActionListener(action);
     }
 
-    public void setAcaoConsulta(ActionListener action) {
-        consulta.addActionListener(action);
-    }
-
-    public void setAcaoExclusao(ActionListener action) {
-        exclusao.addActionListener(action);
+    public void setAcaoAvisoAoCliente(ActionListener action) {
+        avisosAoCliente.addActionListener(action);
     }
 
     public void setAcaoSair(ActionListener action) {
