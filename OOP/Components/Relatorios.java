@@ -1,17 +1,12 @@
-package Componentes;
+package Components;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
+import java.text.*;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import Models.*;
 import Exceptions.*;
 
 public class Relatorios{

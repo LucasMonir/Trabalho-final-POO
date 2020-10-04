@@ -10,7 +10,7 @@ public class CadastroTitulo extends JFrame {
     private JButton inclusao = new JButton("Inclusão");
     private JButton alteracao = new JButton("Alteração");
     private JButton consulta = new JButton("Consulta");
-    private JButton exclusao = new JButton("Exlusão");
+    private JButton exclusao = new JButton("Exclusão");
     private JButton sair = new JButton("Sair");
 
     public CadastroTitulo() {

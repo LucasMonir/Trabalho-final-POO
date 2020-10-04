@@ -1,6 +1,6 @@
-package Componentes;
+package Components;
 
-public interface Consulta {
+public interface IConsulta {
 
     //metodos utilizados em duas classes, Cliente e Titulo
     public String consultaTitulo();

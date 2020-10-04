@@ -1,4 +1,4 @@
-package Componentes;
+package Components;
 
 public class Mes {
     private double inadimplencia = 0;

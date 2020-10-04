@@ -1,6 +1,8 @@
-package Componentes;
+package Models;
 
-public class Cliente implements Consulta {
+import Components.*;
+
+public class Cliente implements IConsulta {
     private String nome;
     private int cpf = 0;
     private Titulo titulo;

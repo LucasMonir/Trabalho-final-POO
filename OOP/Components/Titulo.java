@@ -1,14 +1,13 @@
-package Componentes;
+package Components;
 
-import java.text.DecimalFormat;
-import java.text.ParseException;
+import java.text.*;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import Exceptions.*;
 import Enums.*;
 
-public class Titulo implements Consulta {
+public class Titulo implements IConsulta {
     private double debito = 0;
     private LocalDate dataVencimento;
     private double multa;
