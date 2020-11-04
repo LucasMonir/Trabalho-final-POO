@@ -20,21 +20,19 @@ public class Apk {
             try {
                 switch (op) {
                     case 5:
-                        op = Integer.parseInt(JOptionPane
-                                .showInputDialog("XYZ COMERCIO DE PRODUTOS LTDA. \n" + "SISTEMA DE COBRANÇA \n \n"
-                                        + "MENU PRINCIPAL \n" + "1 -CADASTRO DE TÍTULOS \n" + "2 - BAIXA DE TÍTULOS \n"
-                                        + "3 - RELATÓRIOS \n" + "4 - SALVAR \n" + "0 - FINALIZAR \n" + "Opção:"));
+                        op = Integer.parseInt(JOptionPane.showInputDialog("XYZ COMERCIO DE PRODUTOS LTDA. \n" + "SISTEMA DE COBRANÇA \n \n"
+                                + "MENU PRINCIPAL \n" + "1 -CADASTRO DE TÍTULOS \n" + "2 - BAIXA DE TÍTULOS \n"
+                                + "3 - RELATÓRIOS \n" + "4 - SALVAR \n" + "0 - FINALIZAR \n" + "Opção:"));
                         break;
 
                     case 1:
                         do {
                             switch (subOp) {
                                 case 5:
-                                    subOp = Integer
-                                            .parseInt(JOptionPane.showInputDialog("XYZ COMERCIO DE PRODUTOS LTDA. \n"
-                                                    + "SISTEMA DE COBRANÇA \n \n" + "CADASTRO DE TÍTULOS \n"
-                                                    + "1 - INCLUSÃO \n" + "2 - ALTERAÇÃO \n" + "3 - CONSULTA \n"
-                                                    + "4 - EXCLUSÃO \n" + "0 - RETORNAR \n" + "Opção:"));
+                                    subOp = Integer.parseInt(JOptionPane.showInputDialog("XYZ COMERCIO DE PRODUTOS LTDA. \n"
+                                                + "SISTEMA DE COBRANÇA \n \n" + "CADASTRO DE TÍTULOS \n"
+                                                + "1 - INCLUSÃO \n" + "2 - ALTERAÇÃO \n" + "3 - CONSULTA \n"
+                                                + "4 - EXCLUSÃO \n" + "0 - RETORNAR \n" + "Opção:"));
                                     break;
 
                                 case 1:
@@ -62,8 +60,7 @@ public class Apk {
                                     break;
 
                                 default:
-                                    JOptionPane.showMessageDialog(null, "Opção inválida, voltando ao menu!",
-                                            "Erro no menu", JOptionPane.ERROR_MESSAGE);
+                                    JOptionPane.showMessageDialog(null, "Opção inválida, voltando ao menu!", "Erro no menu", JOptionPane.ERROR_MESSAGE);
                                     subOp = 5;
                             }
                         } while (subOp != 6);
